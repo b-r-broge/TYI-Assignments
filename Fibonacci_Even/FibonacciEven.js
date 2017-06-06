@@ -28,3 +28,21 @@ for (var i = 0; i < evenfib.length ; i++ ) {
 }
 
 console.log(ans);
+
+
+// Do it another way!!!!
+function evenFib() {
+  var out = 2;
+  var fiba = 1;
+  var fibb = 2;
+  var fibc = fiba + fibb;
+  for (fibc; fibc < 4000000; ) {
+    fiba = fibb;
+    fibb = fibc;
+    fibc = fiba + fibb;
+    if (fibc % 2 === 0 ) {
+      out += fibc;
+    }
+  }
+  return out;
+}
